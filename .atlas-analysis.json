@@ -1,0 +1,96 @@
+{
+  "projectType": "api-service",
+  "projectName": "Secure Link API",
+  "projectDescription": "API backend for creating and sharing secure links with expiration control and access limits.",
+  "theme": "sequoia",
+  "primaryColor": "#7c7c80",
+  "lightColor": "#151c28",
+  "darkColor": "#f2f2f2",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/secure-links",
+              "concepts/access-control",
+              "concepts/audit-system"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/authentication",
+              "guides/file-uploads",
+              "guides/link-management",
+              "guides/monitoring"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Links",
+            "pages": [
+              "api/links/create",
+              "api/links/upload",
+              "api/links/resolve",
+              "api/links/revoke"
+            ]
+          },
+          {
+            "group": "Statistics",
+            "pages": [
+              "api/stats/overview",
+              "api/stats/access-metrics",
+              "api/stats/link-metrics",
+              "api/stats/security"
+            ]
+          },
+          {
+            "group": "Health & Monitoring",
+            "pages": [
+              "api/actuator/health",
+              "api/actuator/metrics"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Secure link generation with short codes",
+    "File upload and sharing",
+    "URL shortening",
+    "Access control (expiration, max views, password protection)",
+    "Comprehensive audit logging",
+    "Real-time metrics and statistics",
+    "Health checks and Prometheus integration"
+  ],
+  "publicApiSurface": [
+    "POST /api/links - Create secure link for URL",
+    "POST /api/links/upload - Upload file and create link",
+    "GET /l/{shortCode} - Resolve and access link",
+    "DELETE /l/{shortCode} - Revoke link",
+    "GET /api/stats/access/summary - Access statistics summary",
+    "GET /api/stats/access/hourly - Hourly access distribution",
+    "GET /api/stats/access/daily - Daily access counts",
+    "GET /api/stats/access/failures - Access failure breakdown",
+    "GET /api/stats/links - Link status statistics",
+    "GET /api/stats/links/top - Most accessed links",
+    "GET /api/stats/security/exceptions - Security exception tracking",
+    "GET /actuator/health - Health check endpoint",
+    "GET /actuator/prometheus - Prometheus metrics"
+  ]
+}
